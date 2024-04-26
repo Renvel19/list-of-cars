@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+
 import {
   BrowserModule,
   provideClientHydration,
@@ -10,7 +12,7 @@ import { CarsModule } from './cars/cars.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, CarsModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, CarsModule],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })
